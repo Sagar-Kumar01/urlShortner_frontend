@@ -1,0 +1,144 @@
+/* URL Table Container */
+.urlTableContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 20px 20px;
+    flex: 1;
+    min-height: 0;
+    height: 100%;
+}
+
+/* Table Wrapper */
+.tableWrapper {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+    background: rgba(15, 23, 42, 0.6);
+    border-radius: 0 0 16px 16px;
+    border: 1px solid rgba(100, 116, 139, 0.2);
+    border-top: none;
+    overflow-y: auto;
+    overflow-x: hidden;
+    backdrop-filter: blur(10px);
+}
+
+/* URL List Row */
+.urlRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 18px 24px;
+    border-bottom: 1px solid rgba(100, 116, 139, 0.15);
+    gap: 16px;
+    transition: background 0.2s ease;
+}
+
+.urlRow:last-child {
+    border-bottom: none;
+}
+
+.urlRow:hover {
+    background: rgba(30, 41, 59, 0.4);
+}
+
+/* Short Link Column */
+.shortLinkColumn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 0 0 240px;
+    min-width: 240px;
+}
+
+.shortLink {
+    color: #38bdf8;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.shortLink:hover {
+    color: #7dd3fc;
+    text-decoration: underline;
+}
+
+
+/* Original Link Column */
+.originalLinkColumn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 0 0 300px;
+    min-width: 300px;
+}
+
+
+.originalLink {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    transition: color 0.2s ease;
+}
+
+.originalLink:hover {
+    color: #ffffff;
+}
+
+
+
+/* Clicks Column */
+.clicksColumn {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    font-weight: 500;
+    flex: 0 0 80px;
+    min-width: 80px;
+    text-align: center;
+}
+
+
+/* Date Column */
+.dateColumn {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+    flex: 0 0 120px;
+    min-width: 120px;
+    text-align: center;
+}
+
+/* Register Overlay */
+.registerOverlay {
+    position: relative;
+    padding: 20px 24px;
+    background: linear-gradient(to top, rgba(15, 23, 42, 0.98) 0%, rgba(15, 23, 42, 0.8) 100%);
+    text-align: center;
+}
+
+.registerOverlay p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+}
+
+.registerOverlay a {
+    color: #EB568E;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.registerOverlay a:hover {
+    color: #f472b6;
+    text-decoration: underline;
+}

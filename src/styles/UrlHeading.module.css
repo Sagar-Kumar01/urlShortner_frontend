@@ -1,0 +1,60 @@
+/* URL Table Heading Container - matches UrlList container */
+.headingContainer {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto 0 auto;
+    padding: 0 20px;
+}
+
+.headingWrapper {
+    display: flex;
+    width: 100%;
+    background: rgba(30, 41, 59, 0.4);
+    border-radius: 16px 16px 0 0;
+    border: 1px solid rgba(100, 116, 139, 0.2);
+    border-bottom: none;
+    backdrop-filter: blur(10px);
+}
+
+.urlHeading {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 18px 24px;
+    gap: 16px;
+}
+
+/* Heading Labels */
+.urlHeading span {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Column widths to match list rows */
+.urlHeading span:nth-child(1) {
+    flex: 0 0 240px;
+    min-width: 240px;
+}
+
+.urlHeading span:nth-child(2) {
+    flex: 0 0 300px;
+    min-width: 300px;
+}
+
+.urlHeading span:nth-child(3) {
+    flex: 0 0 80px;
+    min-width: 80px;
+    text-align: center;
+}
+
+.urlHeading span:nth-child(4) {
+    flex: 0 0 120px;
+    min-width: 120px;
+    text-align: center;
+}

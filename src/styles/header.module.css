@@ -1,0 +1,124 @@
+/* Header Container */
+.containerHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 40px;
+    position: relative;
+    z-index: 10;
+}
+
+/* Logo Section */
+.logoSection h2 {
+    font-size: 26px;
+    font-weight: 700;
+    background: linear-gradient(135deg, #EB568E 0%, #144EE3 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.5px;
+    position: relative;
+}
+
+.logoSection h2::after {
+    content: '®';
+    font-size: 10px;
+    position: absolute;
+    top: 0;
+    right: -12px;
+    background: linear-gradient(135deg, #EB568E 0%, #144EE3 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Auth Section */
+.authSection {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.authSection button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-family: inherit;
+}
+
+/* Login Button */
+.authSection button:first-child {
+    background: transparent;
+    border: 1.5px solid rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+}
+
+.authSection button:first-child:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+.authSection button:first-child svg {
+    font-size: 18px;
+}
+
+/* Signup Button */
+.signup {
+    background: linear-gradient(135deg, #144EE3 0%, #1e5af5 100%);
+    border: none !important;
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(20, 78, 227, 0.3);
+}
+
+.signup:hover {
+    background: linear-gradient(135deg, #1e5af5 0%, #2563eb 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(20, 78, 227, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .containerHeader {
+        padding: 14px 20px;
+    }
+
+    .logoSection h2 {
+        font-size: 22px;
+    }
+
+    .authSection button {
+        padding: 10px 18px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .containerHeader {
+        padding: 12px 16px;
+    }
+
+    .logoSection h2 {
+        font-size: 18px;
+    }
+
+    .authSection {
+        gap: 8px;
+    }
+
+    .authSection button {
+        padding: 8px 14px;
+        font-size: 12px;
+    }
+
+    .authSection button:first-child span {
+        display: none;
+    }
+}
