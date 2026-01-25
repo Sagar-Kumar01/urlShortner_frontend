@@ -1,5 +1,5 @@
 import { useState,useContext } from "react";
-import styles from "../styles/Shortner.module.css";
+import styles from "../styles/shortner.module.css";
 import { Context } from "../context/context";
 
 
