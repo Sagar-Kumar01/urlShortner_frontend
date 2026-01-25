@@ -1,6 +1,6 @@
 import { useState,useContext } from "react";
 import styles from "../styles/shortner.module.css";
-import { Context } from "../context/context";
+import { Context } from "../context/Context";
 
 
 
