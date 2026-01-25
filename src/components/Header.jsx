@@ -1,8 +1,9 @@
-import React from "react";
 import styles from "../styles/Header.module.css";
 import { FiArrowRight } from "react-icons/fi";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const navigate = useNavigate();
   return (
     <header className={styles.containerHeader}>
       <div className={styles.logoSection}>
@@ -10,11 +11,13 @@ const Header = () => {
       </div>
 
       <div className={styles.authSection}>
-        <button>
+        <button onClick={() => navigate("/login")}>
           <span>Login</span>
           <FiArrowRight />
         </button>
-        <button className={styles.signup}>Register Now!</button>
+        <button className={styles.signup} onClick={() => navigate("/signup")}>
+          Register Now!
+        </button>
       </div>
     </header>
   );
