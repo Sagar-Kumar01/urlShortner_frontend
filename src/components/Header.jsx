@@ -1,4 +1,4 @@
-import styles from "../styles/Header.module.css";
+import styles from "../styles/header.module.css";
 import { FiArrowRight } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 
