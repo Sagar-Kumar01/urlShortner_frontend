@@ -2,9 +2,6 @@ import { useState,useContext } from "react";
 import styles from "../styles/shortner.module.css";
 import { Context } from "../context/Context";
 
-
-
-
 const Shortner = () => {
   const { allUrls, setAllUrls } = useContext(Context);
   let [inputUrl, setInputUrl] = useState("");

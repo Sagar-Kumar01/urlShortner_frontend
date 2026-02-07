@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "../styles/Login.module.css";
+import { Context } from "../context/Context";
 
 const Login = () => {
   const navigate = useNavigate();
+  const { setUser } = useContext(Context);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -17,19 +19,22 @@ const Login = () => {
       credentials: 'include',
       body: JSON.stringify({ email, password }),
     })
-    .then((res) => res.json())
-    .then((data) => {
-      console.log("Login Response:", data);
-      if(data.success) {
-        localStorage.setItem('isLogin', 'true');
-        navigate("/");
-      } else {
-        console.error("Login failed:", data.message);
-      }
-    })
-    .catch((err) => {
-      console.error("Error:", err);
-    });
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("Login Response:", data);
+        if (data.success) {
+          localStorage.setItem('isLogin', 'true');
+          // Save user data
+          localStorage.setItem('user', JSON.stringify(data.user));
+          setUser(data.user);
+          navigate("/");
+        } else {
+          console.error("Login failed:", data.message);
+        }
+      })
+      .catch((err) => {
+        console.error("Error:", err);
+      });
   };
 
   return (

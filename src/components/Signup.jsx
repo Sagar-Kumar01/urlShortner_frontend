@@ -1,9 +1,11 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useContext } from "react";
 import styles from "../styles/Signup.module.css";
 import { useNavigate } from "react-router-dom";
+import { Context } from "../context/Context";
 
 const Signup = () => {
   const navigate = useNavigate();
+  const { setUser } = useContext(Context);
   const formRef = useRef(null);
   let [error, setError] = useState(null);
 
@@ -43,6 +45,9 @@ const Signup = () => {
         console.log("Signup Response:", data);
         if (data.success) {
           localStorage.setItem('isLogin', 'true');
+          // Save user data
+          localStorage.setItem('user', JSON.stringify(data.user));
+          setUser(data.user);
           navigate("/");
         } else {
           console.error("Signup failed:", data.message);
